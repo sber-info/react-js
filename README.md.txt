@@ -1,2 +1,0 @@
-# Geekbrains React
-Текст
