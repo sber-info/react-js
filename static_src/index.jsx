@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
 // const element = React.createElement(
 //    'h1',
@@ -19,7 +20,6 @@ import ReactDOM from 'react-dom';
 
 
 let messages = ['Привет', 'Как дела?'];
-let answerMsg = ['Нормально'];
 
 const handleClick = () => {
    messages.push("Нормально");
@@ -45,6 +45,6 @@ const MessageField = (props) => {
 };
 
 ReactDOM.render(
-   <MessageField messages={messages} />,
+   <App />,
    document.getElementById('root'),
 );
