@@ -1,0 +1,35 @@
+{
+  "name": "React_JS",
+  "version": "1.0.0",
+  "description": "- [Урок 1. Настройка среды разработки](#Урок-1)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --mode development",
+    "server": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sber-info/react-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sber-info/react-js/issues"
+  },
+  "homepage": "https://github.com/sber-info/react-js#readme",
+  "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
