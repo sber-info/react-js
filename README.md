@@ -15,9 +15,10 @@
 <a href="https://docs.google.com/document/d/1EZlBq6SNbOkcjc-SNcBMy2VfcC7ho7987W4zed4OXRE/edit?usp=drive_open&ouid=108861414195732061066">Методичка</a>
 
 ## Урок 2. Настройка среды разработки
-[#Методичка](https://docs.google.com/document/d/1JuFHgDWcukxf9E8iKTvHFE7CT8jL0QzfjjJqgbw9bFQ/edit#)
+[Методичка](https://docs.google.com/document/d/1JuFHgDWcukxf9E8iKTvHFE7CT8jL0QzfjjJqgbw9bFQ/edit#)
 
 ## Урок 3. Настройка среды разработки
+[Методичка](https://docs.google.com/document/d/12SYqRSg7ShWXS5aMvQx56kdzaP4OdsvMs9w17J9UkuI/edit)
 
 ## Урок 4. Настройка среды разработки
 
