@@ -16,14 +16,14 @@ export default class MessageField extends React.Component {
         input: '',
     };
 
-    textInput=React.createRef();
+    textInput = React.createRef();
 
-    // componentDidMount() {
-    //     this.textInput.current.focus();
-    // };
+    componentDidMount() {
+        this.textInput.current.focus();
+    };
 
-    componentDidUpdate() {
-        if (this.state.messages[this.state.messages.length - 1].autorName === 'User') {
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.messages.length < this.state.messages.length && this.state.messages[this.state.messages.length - 1].autorName === 'User') {
             setTimeout(() =>
                 this.setState(
                     {
@@ -33,9 +33,14 @@ export default class MessageField extends React.Component {
         };
     };
 
-    handleClick = (message) => {
-        this.sendMessage(message)
+    handleSendMessage = () => {
+        this.setState({ messages: [...this.state.messages, { textMsg: this.state.input, autorName: 'User' }], 
+        input: '' });
     };
+
+    // handleClick = (message) => {
+    //     this.sendMessage(message)
+    // };
 
     handleChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
@@ -43,38 +48,36 @@ export default class MessageField extends React.Component {
 
     handleKeyUp = (event, message) => {
         if (event.keyCode === 13) { // Enter
-            this.sendMessage(message)
+            this.handleSendMessage(message)
         }
     };
 
-    sendMessage = (message) => {
-        this.setState({ messages: [...this.state.messages, { textMsg: message, autorName: 'User' }], input: '' });
-    };
+
 
     render() {
         const messageElements = this.state.messages.map((text, index) => (
             <Message key={index} msg={text.textMsg} name={text.autorName} />));
 
-        return <div className="layout">
+        return <div className="message-field_wrap">
             <div className="message-field">
                 {messageElements}
             </div>
-            <div style={ { width: '100%', display: 'flex' } }>
-               <TextField
-                   name="input"
-                   fullWidth={ true }
-                   hintText="Введите сообщение"
-                   style={ { fontSize: '22px' } }
-                   onChange={ this.handleChange }
-                   value={ this.state.input }
-                   onKeyUp={ (event) => this.handleKeyUp(event, this.state.input) }
-               />
-               <FloatingActionButton onClick={ () => this.handleClick(this.state.input) }>
-                   <SendIcon />
-               </FloatingActionButton>
-           </div>
-           </div>
-
+            <div style={{ width: '100%', display: 'flex' }}>
+                <TextField
+                    name="input"
+                    fullWidth={true}
+                    hintText="Введите сообщение"
+                    style={{ fontSize: '22px' }}
+                    onChange={this.handleChange}
+                    value={this.state.input}
+                    onKeyUp={this.handleKeyUp}
+                    ref={this.textInput}
+                />
+                <FloatingActionButton onClick={this.handleSendMessage}>
+                    <SendIcon />
+                </FloatingActionButton>
+            </div>
+        </div>
 
     };
 };  
