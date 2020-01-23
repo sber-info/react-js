@@ -1,15 +1,17 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
+import PropsTypes from 'prop-types';
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
-const Header = () => (
-  <AppBar
-    title="Title"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
-  />
-);
+export default class Header extends React.Component {
+  static propsTypes = {
+    chatId: PropsTypes.number,
+  };
 
-export default Header;
+  static defaultProps = {
+    chatId: 1,
+  };
+
+  render() {
+    return <AppBar title="Проститутки Нижнего" iconClassNameRight="muidocs-icon-navigation-expand-more" />
+  };
+};

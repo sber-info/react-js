@@ -31,6 +31,8 @@ export default class MessageField extends React.Component {
                     }
                 ), 1000);
         };
+        // this.textInput.current.scrollTo(0,document.body.scrollHeight);
+        // console.log(this.textInput.scrollHeight);
     };
 
     handleSendMessage = () => {
