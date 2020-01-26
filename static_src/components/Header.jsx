@@ -1,17 +1,17 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default class Header extends React.Component {
-  static propsTypes = {
-    chatId: PropsTypes.number,
-  };
+    static propTypes = {
+        chatId: PropTypes.number,
+    };
 
-  static defaultProps = {
-    chatId: 1,
-  };
+    static defaultProps = {
+        chatId: 1,
+    };
 
-  render() {
-    return <AppBar title="Проститутки Нижнего" iconClassNameRight="muidocs-icon-navigation-expand-more" />
+    render() {
+        return <AppBar title={'Чат '+this.props.chatId} iconClassNameRight = "muidocs-icon-navigation-expand-more" />
   };
 };

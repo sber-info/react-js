@@ -14,8 +14,7 @@ module.exports = {
     watch: process.argv[process.argv.length - 1] === 'development',
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(js|jsx)$/,
                 include: path.resolve(__dirname, "static_src"),
                 loader: 'babel-loader',
@@ -43,6 +42,13 @@ module.exports = {
         modules: [`${__dirname}/static_src`, `node_modules`],
         extensions: ['.js', '.jsx'],
     },
+
+    devServer: {
+        port: 8080,
+        historyApiFallback: {
+            index: 'index.html'
+        }
+    },
+
+    devtool: 'cheap-inline-module-source-map',
 };
-
-
