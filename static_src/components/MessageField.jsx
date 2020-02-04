@@ -21,6 +21,7 @@ export default class MessageField extends React.Component {
             2: { text: "Здравствуйте!", sender: 'bot' },
         },
         input: '',
+        collapseID: '',
     };
 
     componentDidUpdate(prevProps, prevState) {

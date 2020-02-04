@@ -25,6 +25,8 @@
 
 ## Урок 4.
 ## Настройка среды разработки
+[Методичка](https://docs.google.com/document/d/1Emtepyf3zJ0sLCydWKGsK5z_vIHA-kyZ6mIazSEYVOU/edit)
+
 
 ## Урок 5.
 ## Настройка среды разработки
