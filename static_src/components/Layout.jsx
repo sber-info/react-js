@@ -17,7 +17,7 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div className="layout">
-                <Header  chatId={this.props.chatId}/>
+                <Header chatId={this.props.chatId}/>
                 <div className="chat-wrap">
                     <ChatList />
                     <MessageField chatId={this.props.chatId}/>
